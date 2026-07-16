@@ -150,12 +150,20 @@ function editDay(dateKey) {
   const day = days.find(d => d.date === dateKey);
   if (!day) return;
 
+  // 日付編集（YYYY-MM-DD）
+  const newDate = prompt("日付を入力（例: 2026-07-16）", day.date);
+  if (newDate === null) return;
+
+  // 出勤時刻編集
   const newStart = prompt("出勤時刻を入力（例: 09:12）", day.start || "");
   if (newStart === null) return;
 
+  // 退勤時刻編集
   const newEnd = prompt("退勤時刻を入力（例: 18:44）", day.end || "");
   if (newEnd === null) return;
 
+  // 更新
+  day.date = newDate || day.date;
   day.start = newStart || null;
   day.end = newEnd || null;
 
