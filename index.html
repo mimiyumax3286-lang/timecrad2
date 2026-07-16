@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>横線タイムカード</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <h1>横線タイムカード</h1>
+
+  <!-- 出勤・退勤ボタン -->
+  <div class="start-end-buttons">
+    <button onclick="clockIn()">出勤</button>
+    <button onclick="clockOut()">退勤</button>
+  </div>
+
+  <!-- 1日＝1行のタイムカード一覧 -->
+  <ul id="dayList"></ul>
+
+  <script src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
+</body>
+</html>
