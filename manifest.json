@@ -1,0 +1,9 @@
+{
+  "name": "横線タイムカード",
+  "short_name": "タイムカード",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4CC9A6",
+  "icons": []
+}
